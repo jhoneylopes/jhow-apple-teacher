@@ -46,19 +46,72 @@
                     <view key="view" contentMode="scaleToFill" id="1fl-Vw-JEk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g2f-pG-NtT">
+                                <rect key="frame" x="20" y="108" width="374" height="271"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="271" id="ene-IE-EEE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanetName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p8-Tz-wtv">
+                                <rect key="frame" x="20" y="387" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lwj-4F-T53"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número de Luas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIc-gj-mrS">
+                                <rect key="frame" x="20" y="445" width="142" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fAw-ei-hct"/>
+                                    <constraint firstAttribute="width" constant="142" id="ptR-X4-OYv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svm-Pb-U5t">
+                                <rect key="frame" x="170" y="445" width="224" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cJw-Wx-QqY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="3p8-Tz-wtv" secondAttribute="trailing" constant="20" id="E7i-Mo-9EK"/>
+                            <constraint firstItem="3p8-Tz-wtv" firstAttribute="top" secondItem="g2f-pG-NtT" secondAttribute="bottom" constant="8" id="EKl-yP-K4u"/>
+                            <constraint firstItem="g2f-pG-NtT" firstAttribute="top" secondItem="r6Y-99-tFb" secondAttribute="top" constant="20" id="LZ0-MX-wgR"/>
+                            <constraint firstItem="NIc-gj-mrS" firstAttribute="top" secondItem="3p8-Tz-wtv" secondAttribute="bottom" constant="8" id="PUR-Dz-JOW"/>
+                            <constraint firstItem="svm-Pb-U5t" firstAttribute="leading" secondItem="NIc-gj-mrS" secondAttribute="trailing" constant="8" id="SPR-ty-NTC"/>
+                            <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="g2f-pG-NtT" secondAttribute="trailing" constant="20" id="ZNO-76-AlT"/>
+                            <constraint firstItem="svm-Pb-U5t" firstAttribute="top" secondItem="3p8-Tz-wtv" secondAttribute="bottom" constant="8" id="hzF-fF-VI9"/>
+                            <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="svm-Pb-U5t" secondAttribute="trailing" constant="20" id="iNW-YP-mNQ"/>
+                            <constraint firstItem="NIc-gj-mrS" firstAttribute="leading" secondItem="r6Y-99-tFb" secondAttribute="leading" constant="20" id="j1x-4J-GIL"/>
+                            <constraint firstItem="3p8-Tz-wtv" firstAttribute="leading" secondItem="r6Y-99-tFb" secondAttribute="leading" constant="20" id="mYK-zY-rsU"/>
+                            <constraint firstItem="g2f-pG-NtT" firstAttribute="leading" secondItem="r6Y-99-tFb" secondAttribute="leading" constant="20" id="vpc-D0-kdA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="r6Y-99-tFb"/>
                     </view>
                     <navigationItem key="navigationItem" id="KRH-WK-fjf"/>
+                    <connections>
+                        <outlet property="planetImageView" destination="g2f-pG-NtT" id="oUP-no-rxb"/>
+                        <outlet property="planetNumberOfMoons" destination="svm-Pb-U5t" id="gUL-1l-iYf"/>
+                        <outlet property="planetTitle" destination="3p8-Tz-wtv" id="7Yx-XL-FaQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jqo-nz-pTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="140"/>
+            <point key="canvasLocation" x="2611.594202898551" y="139.95535714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="94t-ss-nCG">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b16-Bw-vbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eug-Yb-fze" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mH1-3G-JUB">
@@ -70,6 +123,7 @@
                         <segue destination="oEr-Y3-S2D" kind="relationship" relationship="rootViewController" id="DES-px-LYa"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b16-Bw-vbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023" y="140"/>
         </scene>

@@ -4,7 +4,7 @@ class ListTableViewController: UIViewController {
 
     @IBOutlet weak var myTableView: UITableView!
 
-    private let data: [String] = ["Mercúrio", "Vênus", "Terra", "Marte", "Júpiter", "Saturno", "Urano", "Netuno"]
+    private let data: [Planet] = PlanetFactory.createPlanet()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class ListTableViewController: UIViewController {
             guard let indexPath = sender as? IndexPath else { return }
 
             if let detail = segue.destination as? DetailViewController {
-                detail.title = data[indexPath.row]
+                detail.show(with: data[indexPath.row])
             }
         }
     }
@@ -32,7 +32,7 @@ extension ListTableViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row].name
         return cell
     }
 }

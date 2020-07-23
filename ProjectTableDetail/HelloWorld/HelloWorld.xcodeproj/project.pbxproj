@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		524AFB0F24C64CC70028E910 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AFB0E24C64CC70028E910 /* DetailViewController.swift */; };
+		524AFB1224C8EDA70028E910 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AFB1124C8EDA70028E910 /* Planet.swift */; };
+		524AFB1424C8F1340028E910 /* PlanetFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524AFB1324C8F1340028E910 /* PlanetFactory.swift */; };
 		52BEDE7824BBB6FD00E1494A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEDE7724BBB6FD00E1494A /* AppDelegate.swift */; };
 		52BEDE7A24BBB6FD00E1494A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEDE7924BBB6FD00E1494A /* SceneDelegate.swift */; };
 		52BEDE7F24BBB6FD00E1494A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BEDE7D24BBB6FD00E1494A /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		524AFB0E24C64CC70028E910 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		524AFB1124C8EDA70028E910 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		524AFB1324C8F1340028E910 /* PlanetFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetFactory.swift; sourceTree = "<group>"; };
 		52BEDE7424BBB6FD00E1494A /* CocaLatao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocaLatao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BEDE7724BBB6FD00E1494A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52BEDE7924BBB6FD00E1494A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 				524AFB0E24C64CC70028E910 /* DetailViewController.swift */,
 			);
 			path = DetailScreen;
+			sourceTree = "<group>";
+		};
+		524AFB1024C8ED6F0028E910 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				524AFB1124C8EDA70028E910 /* Planet.swift */,
+				524AFB1324C8F1340028E910 /* PlanetFactory.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		52BEDE6B24BBB6FD00E1494A = {
@@ -141,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				52BEDE7D24BBB6FD00E1494A /* Main.storyboard */,
+				524AFB1024C8ED6F0028E910 /* Model */,
 				52D320E524BFB6B10001DC6B /* ListScreen */,
 				524AFB0D24C64CAE0028E910 /* DetailScreen */,
 			);
@@ -286,10 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524AFB1424C8F1340028E910 /* PlanetFactory.swift in Sources */,
 				52BEDE7824BBB6FD00E1494A /* AppDelegate.swift in Sources */,
 				52BEDE7A24BBB6FD00E1494A /* SceneDelegate.swift in Sources */,
 				52D320E724BFB8E20001DC6B /* ListTableViewController.swift in Sources */,
 				524AFB0F24C64CC70028E910 /* DetailViewController.swift in Sources */,
+				524AFB1224C8EDA70028E910 /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
