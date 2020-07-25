@@ -1,0 +1,3 @@
+[submodule "ProjectTableDetail/HelloWorld/Kingfisher"]
+	path = ProjectTableDetail/HelloWorld/Kingfisher
+	url = https://github.com/onevcat/Kingfisher.git

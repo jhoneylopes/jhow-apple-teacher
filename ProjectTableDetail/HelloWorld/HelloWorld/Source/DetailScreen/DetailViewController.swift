@@ -10,9 +10,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let safePlanet = planet {
+        if let safePlanet = planet {            
             planetTitle.text = safePlanet.name
             planetNumberOfMoons.text = String(describing: safePlanet.numberOfMoons)
+            planetImageView.image = UIImage(named: safePlanet.imageURL)
         }
     }
 }
