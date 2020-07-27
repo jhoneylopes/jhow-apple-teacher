@@ -18,6 +18,7 @@
 		52BEDE8F24BBB70900E1494A /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEDE8E24BBB70900E1494A /* HelloWorldTests.swift */; };
 		52BEDE9A24BBB70A00E1494A /* HelloWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BEDE9924BBB70A00E1494A /* HelloWorldUITests.swift */; };
 		52D320E724BFB8E20001DC6B /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D320E624BFB8E20001DC6B /* ListTableViewController.swift */; };
+		52FCB40A24CE230B00D2B14D /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCB40924CE230B00D2B14D /* ListTableViewCell.swift */; };
 		85A0A110ED1DAC255E8EA3B6 /* Pods_HelloWorldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C14D7EEA3E8945F4E15FA07A /* Pods_HelloWorldUITests.framework */; };
 		E77122EDE6C32DCA43B28C84 /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0373C9752F4839A27FBA2F /* Pods_HelloWorld.framework */; };
 		EA42CDC39F3FABA8664D8D05 /* Pods_HelloWorldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A7AF95F647B2DDB14363AD6 /* Pods_HelloWorldTests.framework */; };
@@ -59,6 +60,7 @@
 		52BEDE9924BBB70A00E1494A /* HelloWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldUITests.swift; sourceTree = "<group>"; };
 		52BEDE9B24BBB70A00E1494A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52D320E624BFB8E20001DC6B /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		52FCB40924CE230B00D2B14D /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		5A0373C9752F4839A27FBA2F /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7AF95F647B2DDB14363AD6 /* Pods_HelloWorldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE2DE2416AD5E2BDCEE2613 /* Pods-HelloWorldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldTests/Pods-HelloWorldTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				52D320E624BFB8E20001DC6B /* ListTableViewController.swift */,
+				52FCB40924CE230B00D2B14D /* ListTableViewCell.swift */,
 			);
 			path = ListScreen;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FCB40A24CE230B00D2B14D /* ListTableViewCell.swift in Sources */,
 				524AFB1424C8F1340028E910 /* PlanetFactory.swift in Sources */,
 				52BEDE7824BBB6FD00E1494A /* AppDelegate.swift in Sources */,
 				52BEDE7A24BBB6FD00E1494A /* SceneDelegate.swift in Sources */,

@@ -10,6 +10,7 @@ class ListTableViewController: UIViewController {
         super.viewDidLoad()
         myTableView.dataSource = self
         myTableView.delegate = self
+        title = "Sistema Solar"
     }
 
     // Default function to use segues
@@ -31,8 +32,12 @@ extension ListTableViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = data[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "myCell") as? ListTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.planetName.text = data[indexPath.row].name
+        cell.planetImage.image = UIImage(named: data[indexPath.row].imageURL)
+        cell.selectionStyle = .none
         return cell
     }
 }

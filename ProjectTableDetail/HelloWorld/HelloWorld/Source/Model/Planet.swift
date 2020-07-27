@@ -5,6 +5,7 @@ struct Planet {
     var solarPosition: Int
     var size: Int
     var numberOfMoons: Int
+    var description: String
 
     var imageURL: String
 }

@@ -18,6 +18,53 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-sL-UU1">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" rowHeight="87" id="Una-4Q-z0U" customClass="ListTableViewCell" customModule="CocaLatao" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="87"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Una-4Q-z0U" id="AKs-nP-CLw">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="13B-rh-zKU">
+                                                    <rect key="frame" x="11" y="11" width="65" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="65" id="BCQ-ga-Ltp"/>
+                                                        <constraint firstAttribute="width" constant="65" id="V8o-EM-3bi"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHu-BI-XGk">
+                                                    <rect key="frame" x="84" y="27" width="310" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKf-il-UAY">
+                                                    <rect key="frame" x="0.0" y="84" width="414" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="yr2-sS-gSz"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DHu-BI-XGk" firstAttribute="top" secondItem="AKs-nP-CLw" secondAttribute="topMargin" constant="16" id="0KN-EJ-sZ4"/>
+                                                <constraint firstItem="DHu-BI-XGk" firstAttribute="trailing" secondItem="AKs-nP-CLw" secondAttribute="trailingMargin" id="2GC-Ik-nAB"/>
+                                                <constraint firstItem="13B-rh-zKU" firstAttribute="top" secondItem="AKs-nP-CLw" secondAttribute="top" constant="11" id="4Hh-AI-7Pn"/>
+                                                <constraint firstItem="pKf-il-UAY" firstAttribute="leading" secondItem="AKs-nP-CLw" secondAttribute="leading" id="BUC-HZ-1uO"/>
+                                                <constraint firstItem="13B-rh-zKU" firstAttribute="leading" secondItem="AKs-nP-CLw" secondAttribute="leading" constant="11" id="H58-5o-2kr"/>
+                                                <constraint firstAttribute="trailing" secondItem="pKf-il-UAY" secondAttribute="trailing" id="PlL-4I-cUY"/>
+                                                <constraint firstItem="DHu-BI-XGk" firstAttribute="leading" secondItem="13B-rh-zKU" secondAttribute="trailing" constant="8" id="Rcb-x5-0yc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="DHu-BI-XGk" secondAttribute="bottom" constant="15" id="hC1-Ne-dId"/>
+                                                <constraint firstAttribute="bottom" secondItem="pKf-il-UAY" secondAttribute="bottom" constant="2" id="ogI-ur-Hw0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="planetImage" destination="13B-rh-zKU" id="kHT-J8-8US"/>
+                                            <outlet property="planetName" destination="DHu-BI-XGk" id="M2l-Dz-Ean"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -81,15 +128,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C8t-WV-IGa">
+                                <rect key="frame" x="20" y="488" width="374" height="374"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="C8t-WV-IGa" firstAttribute="bottom" secondItem="r6Y-99-tFb" secondAttribute="bottom" id="3Vh-KC-z48"/>
                             <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="3p8-Tz-wtv" secondAttribute="trailing" constant="20" id="E7i-Mo-9EK"/>
                             <constraint firstItem="3p8-Tz-wtv" firstAttribute="top" secondItem="g2f-pG-NtT" secondAttribute="bottom" constant="8" id="EKl-yP-K4u"/>
+                            <constraint firstItem="C8t-WV-IGa" firstAttribute="leading" secondItem="r6Y-99-tFb" secondAttribute="leading" constant="20" id="GBw-wT-d0a"/>
+                            <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="C8t-WV-IGa" secondAttribute="trailing" constant="20" id="GnI-UX-toX"/>
                             <constraint firstItem="g2f-pG-NtT" firstAttribute="top" secondItem="r6Y-99-tFb" secondAttribute="top" constant="20" id="LZ0-MX-wgR"/>
                             <constraint firstItem="NIc-gj-mrS" firstAttribute="top" secondItem="3p8-Tz-wtv" secondAttribute="bottom" constant="8" id="PUR-Dz-JOW"/>
                             <constraint firstItem="svm-Pb-U5t" firstAttribute="leading" secondItem="NIc-gj-mrS" secondAttribute="trailing" constant="8" id="SPR-ty-NTC"/>
                             <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="g2f-pG-NtT" secondAttribute="trailing" constant="20" id="ZNO-76-AlT"/>
+                            <constraint firstItem="C8t-WV-IGa" firstAttribute="top" secondItem="NIc-gj-mrS" secondAttribute="bottom" constant="8" id="ctK-jb-Ujd"/>
                             <constraint firstItem="svm-Pb-U5t" firstAttribute="top" secondItem="3p8-Tz-wtv" secondAttribute="bottom" constant="8" id="hzF-fF-VI9"/>
                             <constraint firstItem="r6Y-99-tFb" firstAttribute="trailing" secondItem="svm-Pb-U5t" secondAttribute="trailing" constant="20" id="iNW-YP-mNQ"/>
                             <constraint firstItem="NIc-gj-mrS" firstAttribute="leading" secondItem="r6Y-99-tFb" secondAttribute="leading" constant="20" id="j1x-4J-GIL"/>
@@ -98,8 +157,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r6Y-99-tFb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KRH-WK-fjf"/>
+                    <navigationItem key="navigationItem" id="KRH-WK-fjf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="rPY-ud-km0">
+                            <connections>
+                                <action selector="shareButton:" destination="GAs-qo-Nb3" id="Bua-Hh-AkR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="descriptionView" destination="C8t-WV-IGa" id="Vg2-Yv-kX6"/>
                         <outlet property="planetImageView" destination="g2f-pG-NtT" id="oUP-no-rxb"/>
                         <outlet property="planetNumberOfMoons" destination="svm-Pb-U5t" id="gUL-1l-iYf"/>
                         <outlet property="planetTitle" destination="3p8-Tz-wtv" id="7Yx-XL-FaQ"/>
