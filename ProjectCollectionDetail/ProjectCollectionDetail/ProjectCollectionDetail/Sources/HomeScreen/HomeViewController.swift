@@ -4,11 +4,7 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var myCollection: UICollectionView!
 
-    private var data: [String] = [
-        "Mercúrio", "Vênus", "Terra",
-        "Marte", "Júpiter", "Saturno",
-        "Urano", "Netuno"
-    ]
+    private var data: [PlanetModel] = PlanetFactory.createPlanet()
 
     // MARK: - Init
 
@@ -31,7 +27,7 @@ class HomeViewController: UIViewController {
         if segue.identifier == "myDetailViewControllerSegue" {
             guard let indexPath = sender as? IndexPath else { return }
             if let detail = segue.destination as? DetailViewController {
-                detail.title = data[indexPath.row]
+                detail.show(from: data[indexPath.row])
             }
         }
     }
