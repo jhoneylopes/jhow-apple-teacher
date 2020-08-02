@@ -4,18 +4,22 @@ class HomeViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var myCollection: UICollectionView!
 
-    private var data: [PlanetModel] = PlanetFactory.createPlanet()
+    private var data: [PlanetModel] = PlanetFactory.createPlanet()    
 
     // MARK: - Init
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+    }
 
     // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.title = "Planetas"
         // Setups | Configurations
         myCollection.dataSource = self
         myCollection.delegate = self
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -28,8 +32,23 @@ class HomeViewController: UIViewController {
             guard let indexPath = sender as? IndexPath else { return }
             if let detail = segue.destination as? DetailViewController {
                 detail.show(from: data[indexPath.row])
+                detail.delegate = self                
             }
         }
+    }
+
+    @IBAction func didTapAbout(_ sender: Any) {
+        performSegue(withIdentifier: "aboutViewControllerSegue", sender: sender)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+
     }
 }
 
@@ -65,5 +84,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     ) -> CGSize {
         let screen = UIScreen.main.bounds
         return CGSize(width: screen.size.width/2.0, height: 200.0)
+    }
+}
+
+extension HomeViewController: DetailViewControllerDelegate {
+    func didFinishedSomeThing(from detail: String) {
+        print("Home: \(detail)")
     }
 }

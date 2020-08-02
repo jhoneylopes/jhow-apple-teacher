@@ -8,6 +8,53 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--About View Controller-->
+        <scene sceneID="td0-tJ-KGw">
+            <objects>
+                <viewController id="wEx-Aw-y2G" customClass="AboutViewController" customModule="ProjectCollectionDetail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Piq-nP-bfV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tyD-kl-QX9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WVe-Jo-cQp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="go1-Ci-UVy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="-608"/>
+        </scene>
+        <!--About Detail View Controller-->
+        <scene sceneID="WrV-1F-zqd">
+            <objects>
+                <viewController id="kTG-TC-bCL" customClass="AboutDetailViewController" customModule="ProjectCollectionDetail" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jfp-hU-lId">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jm-9c-Rdv">
+                                <rect key="frame" x="110" y="269" width="101" height="30"/>
+                                <state key="normal" title="Destroy Planet"/>
+                                <connections>
+                                    <action selector="didTapDestroyPlanet:" destination="kTG-TC-bCL" eventType="touchUpInside" id="ccb-XW-MhG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="p0n-rB-ZZk" firstAttribute="bottom" secondItem="3Jm-9c-Rdv" secondAttribute="bottom" constant="269" id="C8x-R3-ulq"/>
+                            <constraint firstItem="3Jm-9c-Rdv" firstAttribute="top" secondItem="p0n-rB-ZZk" secondAttribute="top" constant="225" id="OLV-av-jWb"/>
+                            <constraint firstItem="3Jm-9c-Rdv" firstAttribute="leading" secondItem="p0n-rB-ZZk" secondAttribute="leading" constant="110" id="qVY-Ds-ncz"/>
+                            <constraint firstItem="p0n-rB-ZZk" firstAttribute="trailing" secondItem="3Jm-9c-Rdv" secondAttribute="trailing" constant="109" id="wDP-6o-cDJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p0n-rB-ZZk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZEF-et-4Ze"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4I1-0P-kNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2647.5" y="145.77464788732394"/>
+        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -60,15 +107,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8eW-PW-Yvy"/>
+                    <navigationItem key="navigationItem" id="8eW-PW-Yvy">
+                        <barButtonItem key="rightBarButtonItem" title="Sobre" id="0ft-Pp-Qkd">
+                            <connections>
+                                <action selector="didTapAbout:" destination="BYZ-38-t0r" id="Ygl-jo-YUq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCollection" destination="nZn-K3-ExC" id="ynY-kj-hUB"/>
                         <segue destination="VOJ-mE-rAH" kind="show" identifier="myDetailViewControllerSegue" id="ojD-LH-V7r"/>
+                        <segue destination="wEx-Aw-y2G" kind="show" identifier="aboutViewControllerSegue" id="rax-UZ-aex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936" y="137"/>
+            <point key="canvasLocation" x="893" y="32"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="ZhY-6v-kMu">
@@ -130,15 +184,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p7U-pv-bSL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gy7-1C-nka"/>
+                    <navigationItem key="navigationItem" id="gy7-1C-nka">
+                        <barButtonItem key="rightBarButtonItem" title="Sobre" id="831-oP-4pY">
+                            <connections>
+                                <action selector="didTapAbouDetail:" destination="VOJ-mE-rAH" id="Tcf-Qw-KwR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myCollection" destination="Rrg-q7-qSu" id="dUK-Ih-90L"/>
                         <outlet property="planetImage" destination="Gi9-21-RCm" id="HS7-1V-est"/>
+                        <segue destination="kTG-TC-bCL" kind="show" identifier="myAboutDetailViewControllerSegue" id="D7W-30-nSj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeF-Zp-aSJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1710" y="137.32394366197184"/>
+            <point key="canvasLocation" x="1736" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FCO-Qr-fuK">
@@ -156,7 +217,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyB-5A-lXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.625" y="138.38028169014083"/>
+            <point key="canvasLocation" x="98" y="32"/>
         </scene>
     </scenes>
 </document>

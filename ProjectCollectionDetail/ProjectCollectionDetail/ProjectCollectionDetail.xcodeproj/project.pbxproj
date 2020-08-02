@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52037DB324D5FFDF0032EB4A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52037DB224D5FFDF0032EB4A /* AboutViewController.swift */; };
+		52037DC224D75F860032EB4A /* AboutDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52037DC124D75F860032EB4A /* AboutDetailViewController.swift */; };
 		5225DA7324D0CD5500466776 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225DA7224D0CD5500466776 /* AppDelegate.swift */; };
 		5225DA7524D0CD5500466776 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225DA7424D0CD5500466776 /* SceneDelegate.swift */; };
 		5225DA7724D0CD5500466776 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5225DA7624D0CD5500466776 /* HomeViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52037DB224D5FFDF0032EB4A /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		52037DC124D75F860032EB4A /* AboutDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDetailViewController.swift; sourceTree = "<group>"; };
 		5225DA6F24D0CD5500466776 /* ProjectCollectionDetail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectCollectionDetail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5225DA7224D0CD5500466776 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5225DA7424D0CD5500466776 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52037DB124D5FFC70032EB4A /* About */ = {
+			isa = PBXGroup;
+			children = (
+				52037DB224D5FFDF0032EB4A /* AboutViewController.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
 		5225DA6624D0CD5400466776 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +156,7 @@
 				5259823724D3794C004CFFFB /* Model */,
 				5225DAA324D0CECA00466776 /* HomeScreen */,
 				52CCA9F024D22DE500E5E002 /* DetailScreen */,
+				52037DB124D5FFC70032EB4A /* About */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -171,6 +184,7 @@
 			children = (
 				52CCA9F124D22E0D00E5E002 /* DetailViewController.swift */,
 				5259823C24D37D70004CFFFB /* DetailCollectionViewCell.swift */,
+				52037DC124D75F860032EB4A /* AboutDetailViewController.swift */,
 			);
 			path = DetailScreen;
 			sourceTree = "<group>";
@@ -309,9 +323,11 @@
 				5225DA7724D0CD5500466776 /* HomeViewController.swift in Sources */,
 				5225DA7324D0CD5500466776 /* AppDelegate.swift in Sources */,
 				52CCA9F224D22E0D00E5E002 /* DetailViewController.swift in Sources */,
+				52037DB324D5FFDF0032EB4A /* AboutViewController.swift in Sources */,
 				5259823D24D37D70004CFFFB /* DetailCollectionViewCell.swift in Sources */,
 				5225DA7524D0CD5500466776 /* SceneDelegate.swift in Sources */,
 				5259823B24D37A0E004CFFFB /* PlanetFactory.swift in Sources */,
+				52037DC224D75F860032EB4A /* AboutDetailViewController.swift in Sources */,
 				5225DAA524D0D2F200466776 /* HomeCollectionViewCell.swift in Sources */,
 				5259823924D37966004CFFFB /* PlanetModel.swift in Sources */,
 			);
