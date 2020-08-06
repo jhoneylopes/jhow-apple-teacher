@@ -1,34 +1,28 @@
-//
-//  ProjectSingleViewAppTests.swift
-//  ProjectSingleViewAppTests
-//
-//  Created by Jhoney Lopes on 03/08/20.
-//  Copyright © 2020 Jhoney Lopes. All rights reserved.
-//
-
 import XCTest
 @testable import ProjectSingleViewApp
 
 class ProjectSingleViewAppTests: XCTestCase {
+    var sut: MainViewController!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func setUp() {
+        sut = MainViewController()
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let expected: Bool = sut.calculateBMI(sWeight: "90,9", sSize: "1,84")
+
+        XCTAssertTrue(expected, "Teste falhou")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_CalculateBMI_WhenParametersAreZero_HasFalseReturn() throws {
+        let expected: Bool = sut.calculateBMI(sWeight: "0", sSize: "0")
+
+        XCTAssertFalse(expected, "Teste falhou")
     }
 
+    func test_CalculateBMI_WhenWeightIsInvalid_HasFalseReturn() {
+        let expected: Bool = sut.calculateBMI(sWeight: "*", sSize: "1,84")
+
+        XCTAssertFalse(expected, "Test failed: test_CalculateBMI_WhenWeightIsInvalid_HasFalseReturn")
+    }
 }

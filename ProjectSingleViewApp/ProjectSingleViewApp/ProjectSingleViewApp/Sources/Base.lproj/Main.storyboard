@@ -21,8 +21,63 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPm-Co-MGK" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y24-2I-8TT">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite o seu peso:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfj-MO-oU1">
+                                                        <rect key="frame" x="8" y="0.0" width="398" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="IGU-gv-vYk"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ex: 56,5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-nV-oJg">
+                                                        <rect key="frame" x="8" y="40" width="398" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="2gx-28-OxO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite a sua altura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clX-n4-3lw">
+                                                        <rect key="frame" x="8" y="102" width="398" height="32"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="32" id="VyP-yA-l2R"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ex: 1,82" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib7-qm-REn">
+                                                        <rect key="frame" x="8" y="142" width="398" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="2BE-NV-kfv"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Upv-nV-oJg" secondAttribute="trailing" constant="8" id="2sw-dD-7sR"/>
+                                                    <constraint firstItem="nfj-MO-oU1" firstAttribute="leading" secondItem="Y24-2I-8TT" secondAttribute="leading" constant="8" id="37d-id-8Nm"/>
+                                                    <constraint firstItem="Upv-nV-oJg" firstAttribute="top" secondItem="nfj-MO-oU1" secondAttribute="bottom" constant="8" id="FqM-9q-o3x"/>
+                                                    <constraint firstItem="clX-n4-3lw" firstAttribute="leading" secondItem="Y24-2I-8TT" secondAttribute="leading" constant="8" id="Su6-69-EYr"/>
+                                                    <constraint firstItem="Ib7-qm-REn" firstAttribute="top" secondItem="clX-n4-3lw" secondAttribute="bottom" constant="8" id="VJf-4K-yb6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="clX-n4-3lw" secondAttribute="trailing" constant="8" id="XvV-Nr-x9x"/>
+                                                    <constraint firstItem="Ib7-qm-REn" firstAttribute="leading" secondItem="Y24-2I-8TT" secondAttribute="leading" constant="8" id="YZP-62-R8H"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ib7-qm-REn" secondAttribute="trailing" constant="8" id="ahk-FZ-UaL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nfj-MO-oU1" secondAttribute="trailing" constant="8" id="cfJ-cQ-TOs"/>
+                                                    <constraint firstAttribute="height" constant="676" id="deH-vc-KpM"/>
+                                                    <constraint firstItem="Upv-nV-oJg" firstAttribute="leading" secondItem="Y24-2I-8TT" secondAttribute="leading" constant="8" id="eMs-PP-Pxg"/>
+                                                    <constraint firstItem="nfj-MO-oU1" firstAttribute="top" secondItem="Y24-2I-8TT" secondAttribute="top" id="pGd-o5-YXl"/>
+                                                    <constraint firstItem="clX-n4-3lw" firstAttribute="top" secondItem="Upv-nV-oJg" secondAttribute="bottom" constant="28" id="rTZ-WQ-puc"/>
+                                                </constraints>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74i-le-ugW">
-                                                <rect key="frame" x="107" y="684" width="200" height="44"/>
+                                                <rect key="frame" x="82" y="684" width="250" height="44"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="0UO-J3-1Pt"/>
@@ -31,23 +86,19 @@
                                                 <state key="normal" title="Calcular">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculateBMI:" destination="bqo-ML-fVr" eventType="touchUpInside" id="9O9-ap-80a"/>
+                                                </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y24-2I-8TT">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="676" id="deH-vc-KpM"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="Y24-2I-8TT" firstAttribute="top" secondItem="aPm-Co-MGK" secondAttribute="top" id="3w3-q2-viO"/>
                                             <constraint firstItem="74i-le-ugW" firstAttribute="top" secondItem="Y24-2I-8TT" secondAttribute="bottom" constant="8" id="JTV-JL-DcC"/>
                                             <constraint firstAttribute="bottom" secondItem="74i-le-ugW" secondAttribute="bottom" constant="8" id="NYL-aQ-VwW"/>
-                                            <constraint firstItem="74i-le-ugW" firstAttribute="leading" secondItem="aPm-Co-MGK" secondAttribute="leading" constant="107" id="bec-Zi-zBP"/>
+                                            <constraint firstItem="74i-le-ugW" firstAttribute="leading" secondItem="aPm-Co-MGK" secondAttribute="leading" constant="82" id="bec-Zi-zBP"/>
                                             <constraint firstItem="Y24-2I-8TT" firstAttribute="leading" secondItem="aPm-Co-MGK" secondAttribute="leading" id="c0u-iu-qtx"/>
-                                            <constraint firstAttribute="trailing" secondItem="74i-le-ugW" secondAttribute="trailing" constant="107" id="fOJ-I0-oUT"/>
+                                            <constraint firstAttribute="trailing" secondItem="74i-le-ugW" secondAttribute="trailing" constant="82" id="fOJ-I0-oUT"/>
                                             <constraint firstAttribute="trailing" secondItem="Y24-2I-8TT" secondAttribute="trailing" id="fsv-sr-g3f"/>
                                         </constraints>
                                     </view>
@@ -74,10 +125,16 @@
                         <viewLayoutGuide key="safeArea" id="AKh-oG-qjj"/>
                     </view>
                     <navigationItem key="navigationItem" id="3zS-XK-o9R"/>
+                    <connections>
+                        <outlet property="executeButton" destination="74i-le-ugW" id="BKd-CC-VG0"/>
+                        <outlet property="myScrollView" destination="a6G-vL-GLl" id="p2F-1R-0hA"/>
+                        <outlet property="sizeTextField" destination="Ib7-qm-REn" id="H0G-MD-c1q"/>
+                        <outlet property="weightTextField" destination="Upv-nV-oJg" id="1cZ-yF-cNa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5G0-xY-yQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059.4202898550725" y="123.09782608695653"/>
+            <point key="canvasLocation" x="1059.4202898550725" y="122.54464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ly3-wY-3Dh">
