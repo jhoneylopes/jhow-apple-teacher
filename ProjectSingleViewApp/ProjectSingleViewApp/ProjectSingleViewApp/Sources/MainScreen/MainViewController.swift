@@ -7,6 +7,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var sizeTextField: UITextField!
+    @IBOutlet weak var bmiResultLabel: UILabel!
 
     private var weight: Double = 0.0
     private var size: Double = 0.0
@@ -27,6 +28,12 @@ class MainViewController: UIViewController {
             action: #selector(didTapBackground)
         )
         myScrollView.addGestureRecognizer(tap)
+        bmiResultLabel.isHidden = true
+
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [UIColor.lightGray.cgColor, UIColor.white.cgColor]
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
     @objc
@@ -44,13 +51,22 @@ class MainViewController: UIViewController {
         if let dWeight = Double(sWeight?.replacingOccurrences(of: ",", with: ".") ?? "0"),
             let dSize = Double(sSize?.replacingOccurrences(of: ",", with: ".") ?? "0") {
             if dSize > 0 {
-                print(dWeight / (dSize * dSize))
+                bmiResultLabel.text = String(format: "%.2f", dWeight / (dSize * dSize))
+                bmiResultLabel.isHidden = false
                 return true
             }
             return false
         } else {
-            print("Campos invalidos")
+            ShowAlertManager.show(title: "Erro",
+                                  message: "Campos inválidos, por favor preencha os campos de peso e altura.",
+                                  target: self)
             return false
         }
     }
+
+    @IBAction func didTapInformationButton(_ sender: Any) {
+        ShowAlertManager.show(title: "Informação",
+                              message: "O seu IMC é calculado a partir da sua altura e o seu peso.",
+                              target: self)
+    }    
 }

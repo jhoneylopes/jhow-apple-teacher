@@ -15,6 +15,7 @@
 		52037DDC24D8B9D60032EB4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52037DDA24D8B9D60032EB4A /* LaunchScreen.storyboard */; };
 		52037DE724D8B9D60032EB4A /* ProjectSingleViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52037DE624D8B9D60032EB4A /* ProjectSingleViewAppTests.swift */; };
 		52037DF224D8B9D60032EB4A /* ProjectSingleViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52037DF124D8B9D60032EB4A /* ProjectSingleViewAppUITests.swift */; };
+		52D4B2EE24DF73520029DC66 /* ShowAlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D4B2ED24DF73520029DC66 /* ShowAlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		52037DED24D8B9D60032EB4A /* ProjectSingleViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectSingleViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52037DF124D8B9D60032EB4A /* ProjectSingleViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSingleViewAppUITests.swift; sourceTree = "<group>"; };
 		52037DF324D8B9D60032EB4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52D4B2ED24DF73520029DC66 /* ShowAlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		52037E0124DA09CF0032EB4A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				52D4B2EC24DF73290029DC66 /* Manager */,
 				52037DD524D8B9CF0032EB4A /* Main.storyboard */,
 				52037E0224DA09DE0032EB4A /* MainScreen */,
 			);
@@ -142,6 +145,14 @@
 				52037DD324D8B9CF0032EB4A /* MainViewController.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		52D4B2EC24DF73290029DC66 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				52D4B2ED24DF73520029DC66 /* ShowAlertManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52037DD424D8B9CF0032EB4A /* MainViewController.swift in Sources */,
+				52D4B2EE24DF73520029DC66 /* ShowAlertManager.swift in Sources */,
 				52037DD024D8B9CF0032EB4A /* AppDelegate.swift in Sources */,
 				52037DD224D8B9CF0032EB4A /* SceneDelegate.swift in Sources */,
 			);
