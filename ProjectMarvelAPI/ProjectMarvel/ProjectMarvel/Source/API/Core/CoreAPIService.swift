@@ -55,19 +55,18 @@ class CoreAPIService {
         }
     }
 
-    func makeRequest(path: String, httpMethod: String) -> URLRequest {
+    func makeRequest(path: String, httpMethod: String, query: [URLQueryItem] = []) -> URLRequest {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
         urlComponents.path = path
 
         let publicKey = "af13838a26462b30770a6cb0ec147645"
         let privateKey = "51197c8676d9b63e464197f5a027f020455f0d94"
         let hash: String = "1" + privateKey + publicKey
-        let queryItems = [
-            URLQueryItem(name: "ts", value: "1"),
-            URLQueryItem(name: "apikey", value: publicKey),
-            URLQueryItem(name: "hash", value: hash.md5),
+        var queryItems = query
+        queryItems.append(URLQueryItem(name: "ts", value: "1"))
+        queryItems.append(URLQueryItem(name: "apikey", value: publicKey))
+        queryItems.append(URLQueryItem(name: "hash", value: hash.md5))
 
-        ]
         urlComponents.queryItems = queryItems
 
         let url = urlComponents.url!
