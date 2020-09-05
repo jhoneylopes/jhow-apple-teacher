@@ -1,11 +1,11 @@
 import UIKit
 
-protocol AboutDetailViewControllerDelegate {
+protocol AboutDetailViewControllerDelegate: class {
     func destroyPlanet()
 }
 
 class AboutDetailViewController: UIViewController{
-    var delegate: AboutDetailViewControllerDelegate?
+    weak var delegate: AboutDetailViewControllerDelegate?
 
     @IBAction func didTapDestroyPlanet(_ sender: Any) {
         delegate?.destroyPlanet()
