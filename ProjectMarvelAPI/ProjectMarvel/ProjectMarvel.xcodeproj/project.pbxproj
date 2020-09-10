@@ -11,6 +11,8 @@
 		2047BDB6E931F832BF917CFE /* Pods_ProjectMarvelTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621395A43C8A34AD3B8DCAE /* Pods_ProjectMarvelTests.framework */; };
 		5233FC0A24EDDD2000F4D22F /* GetComicsMarverlAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC0924EDDD2000F4D22F /* GetComicsMarverlAPI.swift */; };
 		5233FC0C24EDDD5800F4D22F /* ComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233FC0B24EDDD5800F4D22F /* ComicsResponse.swift */; };
+		5262AA2525097E7500643699 /* FullImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262AA2425097E7500643699 /* FullImageViewController.swift */; };
+		5262AA27250AD41400643699 /* ExampleActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5262AA26250AD41400643699 /* ExampleActivity.swift */; };
 		529F3C032501975400140958 /* CharactersViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F3C022501975400140958 /* CharactersViewCell.swift */; };
 		52AD01EB24E0A731002B32FE /* GetCharactersMarverlAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD01EA24E0A731002B32FE /* GetCharactersMarverlAPI.swift */; };
 		52AD01EE24E0A786002B32FE /* CharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AD01ED24E0A786002B32FE /* CharactersResponse.swift */; };
@@ -52,6 +54,8 @@
 		4F5CCF6678E85C4FAEB657B2 /* Pods-ProjectMarvelTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectMarvelTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectMarvelTests/Pods-ProjectMarvelTests.release.xcconfig"; sourceTree = "<group>"; };
 		5233FC0924EDDD2000F4D22F /* GetComicsMarverlAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicsMarverlAPI.swift; sourceTree = "<group>"; };
 		5233FC0B24EDDD5800F4D22F /* ComicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsResponse.swift; sourceTree = "<group>"; };
+		5262AA2425097E7500643699 /* FullImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullImageViewController.swift; sourceTree = "<group>"; };
+		5262AA26250AD41400643699 /* ExampleActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleActivity.swift; sourceTree = "<group>"; };
 		529F3C022501975400140958 /* CharactersViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewCell.swift; sourceTree = "<group>"; };
 		52AD01EA24E0A731002B32FE /* GetCharactersMarverlAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCharactersMarverlAPI.swift; sourceTree = "<group>"; };
 		52AD01ED24E0A786002B32FE /* CharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersResponse.swift; sourceTree = "<group>"; };
@@ -122,6 +126,15 @@
 				D67D28C0DDB6225006FA975C /* Pods-ProjectMarvelUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5262AA2325097C7E00643699 /* FullImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5262AA2425097E7500643699 /* FullImageViewController.swift */,
+				5262AA26250AD41400643699 /* ExampleActivity.swift */,
+			);
+			path = FullImageScreen;
 			sourceTree = "<group>";
 		};
 		52AD01E824E0A6C8002B32FE /* Core */ = {
@@ -212,6 +225,7 @@
 				52D4B35824E0A0D10029DC66 /* Extensions */,
 				52D4B32324E09D650029DC66 /* Main.storyboard */,
 				52D4B34E24E09DBA0029DC66 /* HomeScreen */,
+				5262AA2325097C7E00643699 /* FullImageScreen */,
 				52D4B34F24E0A00D0029DC66 /* API */,
 			);
 			path = Source;
@@ -487,12 +501,14 @@
 				52D4B31E24E09D650029DC66 /* AppDelegate.swift in Sources */,
 				52D4B35424E0A0360029DC66 /* APIError.swift in Sources */,
 				52D4B35524E0A0360029DC66 /* HTTPMethod.swift in Sources */,
+				5262AA2525097E7500643699 /* FullImageViewController.swift in Sources */,
 				52D4B32024E09D650029DC66 /* SceneDelegate.swift in Sources */,
 				52AD01EB24E0A731002B32FE /* GetCharactersMarverlAPI.swift in Sources */,
 				5233FC0C24EDDD5800F4D22F /* ComicsResponse.swift in Sources */,
 				5233FC0A24EDDD2000F4D22F /* GetComicsMarverlAPI.swift in Sources */,
 				52D4B35A24E0A0E80029DC66 /* String+Ext.swift in Sources */,
 				52D4B35724E0A0360029DC66 /* Networking.swift in Sources */,
+				5262AA27250AD41400643699 /* ExampleActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

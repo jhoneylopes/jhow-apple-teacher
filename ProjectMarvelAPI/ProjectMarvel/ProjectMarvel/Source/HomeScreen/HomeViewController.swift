@@ -5,13 +5,17 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var myTable: UITableView!
     @IBOutlet weak var mySearchBar: UISearchBar!
 
-    var data: [CharactersResult]?
+    private var data: [CharactersResult]?
+    private var filter: FilterCharacters = .name
+    private let segueIdentifier = "FullImageScreenSegue"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         myTable.dataSource = self
+        myTable.delegate = self
         mySearchBar.delegate = self
-        
+        self.title = self.filter.text
+
         callService()
     }
 
@@ -31,7 +35,7 @@ class HomeViewController: UIViewController {
 
     private func getCharacters(with name: String? = nil) {
         let api = CoreAPIService()
-        api.getCharacters(name: name) { response in
+        api.getCharacters(name: name, filter: self.filter) { response in
             switch response {
             case .success(let response):
                 self.data = response.data.results
@@ -42,6 +46,37 @@ class HomeViewController: UIViewController {
                 print(error)
             }
         }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueIdentifier {
+            if let vc = segue.destination as? FullImageViewController,
+                let url = sender as? URL {
+                vc.show(urlImage: url)
+            }
+        }
+    }
+
+    @IBAction func filterCells(_ sender: Any) {
+        showFilterAlert()
+    }
+
+    private func showFilterAlert() {
+        let alert = UIAlertController(title: "Escolha o seu filtro", message: "Filtros alteram o resultado. \nSe deseja algo específico, usar filtro por Nome. \nSe deseja vários resultados, filtre por palavra inicial.", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction.init(title: "Nome", style: .default) { [weak self] action in
+            guard let self = self else { return }
+            self.filter = .name
+            self.title = self.filter.text
+            self.mySearchBar.placeholder = "Busca por nome"
+        })
+        alert.addAction(UIAlertAction(title: "Palavra Inicial", style: .default) { [weak self] action in
+            self?.filter = .nameStartsWith
+            self?.title = self?.filter.text
+            self?.mySearchBar.placeholder = "Busca por palavra inicial"
+        })
+
+        self.present(alert, animated: true)
     }
 }
 
@@ -62,6 +97,15 @@ extension HomeViewController: UITableViewDataSource {
         }
         cell.selectionStyle = .none
         return cell
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let item = data?[indexPath.row] {
+            let url = URL(string: "\(item.thumbnail.path).\(item.thumbnail.extension)")
+            performSegue(withIdentifier: segueIdentifier, sender: url)
+        }
     }
 }
 
